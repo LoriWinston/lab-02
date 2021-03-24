@@ -35,3 +35,21 @@ const {
     });
   });
  
+  // find index function test
+
+  describe('should use callback findIndexFunction to get a new filtered array that returns only even numbers', () => {
+  it('should get old array and return modified array with the callback instructions returning even numbers only', () => {
+
+    function ifFunction(number){
+      if (number % 2 === 0) {
+        return number
+      }
+    }
+
+    const numbers = [1, 2, 3, 4, 5]
+
+    const actual = filterFunction(numbers, (i) => ifFunction(i))
+
+    expect(actual).toEqual([2, 4])
+    });
+  });
