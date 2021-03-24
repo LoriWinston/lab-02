@@ -12,7 +12,26 @@ const mappedFunction = (array, callback) => {
 
   };
 
+  const filterFunction = (array, callback) => {
+    let tempArr = [];
+
+    for(let i = 0; i < array.length; i++) {
+      if(array[i] % 2 === 0) {
+        tempArr = [...tempArr, array[i]]
+      }
+    }
+    return tempArr;
+  };
+  
+  
+  
+  
+  
+  
+  
+  
   module.exports = {
-    mappedFunction
+    mappedFunction,
+    filterFunction
   };
   
